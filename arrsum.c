@@ -46,6 +46,7 @@ int main() {
         arrays->a_row = a[i];
         arrays->b_row = b[i];
         arrays->c_row = c[i];
+
         sumarr((void*) arrays);
     }
 
