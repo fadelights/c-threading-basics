@@ -57,6 +57,9 @@ int main() {
     for (int i = 0; i < M; i++)
         pthread_join(tid[i], NULL);
 
+    // always free allocated memory!
+    free(arrays);
+
     // print the result
     printarr(c);
 

@@ -49,6 +49,9 @@ int main() {
         sumarr((void*) arrays);
     }
 
+    // always free allocated memory!
+    free(arrays);
+
     // print the arrays
     printarr(a);
     printarr(b);
