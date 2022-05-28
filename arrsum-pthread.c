@@ -43,22 +43,25 @@ int main() {
 
     // threads used for summation of rows
     pthread_t tid[M];
-    struct args* arrays = (struct args*) malloc(sizeof(struct args));
 
     // create threads
     for (int i = 0; i < M; i++) {
+        struct args* arrays = (struct args*) malloc(sizeof(struct args));
         arrays->a_row = a[i];
         arrays->b_row = b[i];
         arrays->c_row = c[i];
+
         pthread_create(&tid[i], NULL, sumarr, (void*) arrays);
     }
 
     // join threads
-    for (int i = 0; i < M; i++)
-        pthread_join(tid[i], NULL);
+    for (int i = 0; i < M; i++) {
+        void** result;
+        pthread_join(tid[i], result);
 
-    // always free allocated memory!
-    free(arrays);
+        // always free allocated memory!
+        free(result);
+    }
 
     // print the result
     printarr(c);
@@ -76,7 +79,7 @@ void* sumarr(void* arrays) {
     for (int j = 0; j < N; j++)
         c[j] = a[j] + b[j];
 
-    return NULL;
+    return arrays;
 }
 
 // aux function for printing arrays
