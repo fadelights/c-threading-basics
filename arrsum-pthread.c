@@ -25,9 +25,9 @@ void* printarr(int arr[M][N]);
 
 // structure for passing arguments to the function call
 struct args {
-    int* a_arr;
-    int* b_arr;
-    int* c_arr;
+    int* a_row;
+    int* b_row;
+    int* c_row;
 };
 
 
@@ -47,9 +47,9 @@ int main() {
 
     // create threads
     for (int i = 0; i < M; i++) {
-        arrays->a_arr = a[i];
-        arrays->b_arr = b[i];
-        arrays->c_arr = c[i];
+        arrays->a_row = a[i];
+        arrays->b_row = b[i];
+        arrays->c_row = c[i];
         pthread_create(&tid[i], NULL, sumarr, (void*) arrays);
     }
 
@@ -66,9 +66,9 @@ int main() {
 
 // function to sum two matrices
 void* sumarr(void* arrays) {
-    int* a = ((struct args*) arrays)->a_arr;
-    int* b = ((struct args*) arrays)->b_arr;
-    int* c = ((struct args*) arrays)->c_arr;
+    int* a = ((struct args*) arrays)->a_row;
+    int* b = ((struct args*) arrays)->b_row;
+    int* c = ((struct args*) arrays)->c_row;
 
     for (int j = 0; j < N; j++)
         c[j] = a[j] + b[j];
