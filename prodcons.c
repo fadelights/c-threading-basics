@@ -19,10 +19,7 @@ generate random numbers in range GEN_RANGE
 into the buffer which the consumer will consume.
 Numbers will be consumed in a LIFO fashion.
 
-Written by
-    - Arman Rezaei (9723034)
-    - Shirin Mohammadi (9712046)
-    - Mahboubeh Enayati (9713025)
+Written by Arman Rezaei (9723034)
 Amirkabir University of Technology
 May 27, 2022
 */

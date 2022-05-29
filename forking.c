@@ -16,10 +16,7 @@ an int value as following:
 The parent can wait for the execution of the child to
 finish by using the wait() system call.
 
-Written by
-    - Arman Rezaei (9723034)
-    - Shirin Mohammadi (9712046)
-    - Mahboubeh Enayati (9713025)
+Written by Arman Rezaei (9723034)
 Amirkabir University of Technology
 May 19, 2022
 */

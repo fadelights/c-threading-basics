@@ -3,10 +3,7 @@ For each row present in the two input matrices, there
 will be a separete thread created to handle the summations
 of that row.
 
-Written by
-    - Arman Rezaei (9723034)
-    - Shirin Mohammadi (9712046)
-    - Mahboubeh Enayati (9713025)
+Written by Arman Rezaei (9723034)
 Amirkabir University of Technology
 May 18, 2022
 */

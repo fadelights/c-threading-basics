@@ -3,10 +3,7 @@ This code is used to demonstrate the correctness of the
 functions that will be used in the next section for
 multi-threading (04-pthread-sum.c).
 
-Written by
-    - Arman Rezaei (9723034)
-    - Shirin Mohammadi (9712046)
-    - Mahboubeh Enayati (9713025)
+Written by Arman Rezaei (9723034)
 Amirkabir University of Technology
 May 18, 2022
 */
