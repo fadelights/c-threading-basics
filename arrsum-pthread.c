@@ -56,8 +56,8 @@ int main() {
 
     // join threads
     for (int i = 0; i < M; i++) {
-        void** result;
-        pthread_join(tid[i], result);
+        void* result;
+        pthread_join(tid[i], &result);
 
         // always free allocated memory!
         free(result);
