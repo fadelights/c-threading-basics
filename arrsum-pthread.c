@@ -1,6 +1,6 @@
 /* C program to sum two matrices using multi-threading.
 For each row present in the two input matrices, there
-will be a separete thread created to handle the summations
+will be a separate thread created to handle the summations
 of that row.
 
 Written by Arman Rezaei (9723034)
